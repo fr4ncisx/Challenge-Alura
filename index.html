@@ -13,14 +13,12 @@
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
 <header>
-    <section>
+        <div class="container-title"></div>
         <div class="top">
             <img class="logo-top" src="img/aluraLogo.png" alt="Logo Alura">
         </div>
-    </section>
-    <div class="container-title">
         <h1>Encriptador de texto</h1>
-    </div>
+        </div>
 </header>
 
 <body>
@@ -28,7 +26,8 @@
         <div class="container-both">
             <div class="container-text">
                 <textarea name="text" class="encrypt_text" cols="75" rows="15"
-                    placeholder="Inserta aquí tu texto sin acentos y en minúsculas" autofocus oninput="readLetters();"></textarea>
+                    placeholder="Inserta aquí tu texto sin acentos y en minúsculas" autofocus
+                    oninput="readLetters();"></textarea>
                 <div class="bottom-section">
                     <div class="msg-bottom">
                         <p class="warning-msg">&#9888; Solo letras en minúsculas y sin acentos</p>
