@@ -1,0 +1,288 @@
+header {
+  display: flex;
+  font-family: "Inter", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 0.25rem 0;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+.container-title {
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  width: 75%;
+}
+.logo-top {
+  width: 8rem;
+}
+body {
+  background-color: #000000;
+}
+main {
+  margin: 0 5rem;
+  font-family: "Inter", sans-serif;
+}
+.container-both {
+  display: flex;
+  align-content: center;
+}
+.container-text {
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: column;
+  margin-right: 5rem;
+}
+.container-decrypt {
+  display: flex;
+  width: 50%;
+  /*height: 100%;*/
+}
+.encrypt_text {
+  resize: none;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  background-color: #3b3b3b;
+  font-size: 32px;
+  font-family: "Inter", sans-serif;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 20px;
+  width: 100%;
+  height: 600px;
+  box-shadow: 5px -2px 20px -5px black;
+  transition: 500ms;
+}
+.decrypted-text {
+  color: #0a3871;
+  background-color: #1b1b1b;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  border-radius: 50px;
+  width: 100%;
+  box-shadow: 5px -2px 20px -5px black;
+  transition: 500ms;
+}
+.msgNotFound-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  /*height: 42rem;*/
+  padding: 1rem 2rem;
+  flex-direction: column;
+}
+#txt-encrypted {
+  display: none;
+  visibility: hidden;
+  text-overflow: ellipsis;
+  overflow-wrap: anywhere;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  font-size: 18px;
+  margin-bottom: auto;
+  font-weight: bold;
+  color: white;
+}
+#msgNotFound {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-top: 1.5rem;
+}
+#notFound {
+  display: flex;
+  flex-wrap: wrap;
+  width: 250px;
+  transition: 500ms;
+}
+.msg-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.warning-msg,
+.char-counter {
+  color: white;
+  font-weight: 500;
+  margin: 0.75rem 0.4rem;
+  transition: 500ms;
+}
+.bottom-section {
+  display: block;
+}
+.main-buttons {
+  display: flex;
+}
+.encrypt {
+  color: rgb(255, 255, 255);
+  background-color: darkblue;
+  margin: 0.25rem 1rem;
+}
+.decrypt {
+  color: darkblue;
+  border-color: darkblue;
+  margin: 0.25rem 0;
+  border-style: solid;
+  border-width: 1px;
+}
+.encrypt_text:hover,
+.decrypted-text:hover {
+  box-shadow: 5px 5px 30px 5px blue;
+  transition: 500ms;
+}
+.encrypt,
+.decrypt,
+.copy {
+  border-radius: 18px;
+  border-style: none;
+  width: 20rem;
+  height: 67px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  transition: 500ms;
+}
+.copy {
+  background-color: #0a3871;
+  position: relative;
+  color: white;
+  border-color: darkblue;
+  border-style: solid;
+  border-width: 1px;
+  margin: 2rem 2.75rem;
+  width: 50%;
+}
+.encrypt:hover {
+  font-size: 24px;
+  background-color: rgb(255, 0, 0);
+  transition: 500ms;
+}
+.decrypt:hover {
+  font-size: 24px;
+  background-color: rgb(207, 194, 12);
+  color: #000000;
+  border: none;
+  font-weight: bold;
+  transition: 500ms;
+}
+.copy:hover {
+  font-size: 24px;
+  background-color: rgb(255, 0, 0);
+  border: none;
+  transition: 500ms;
+}
+.encrypt:active,
+.decrypt:active,
+.copy:active {
+  font-size: 12px;
+  transition: 200ms;
+}
+footer:hover p {
+  color: rgb(251, 255, 0);
+  transition: 1s;
+}
+footer {
+  background-color: #101111;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  position: relative;
+  color: white;
+  text-align: center;
+  margin-top: 5rem;
+}
+footer p {
+  width: 100%;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 1065px) {
+  .msgNotFound-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  .bottom-section,
+  .main-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container-title {
+    width: 10%;
+  }
+  .main-buttons,
+  .bottom-section {
+    width: 100%;
+  }
+  .copy {
+    width: 200px;
+    transition: 500ms;
+  }
+  .container-both {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+  }
+  .container-text {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column;
+    margin-right: 5rem;
+    transition: 500ms;
+  }
+  .container-decrypt {
+    position: relative;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 90%;
+    height: auto;
+    transition: 500ms;
+  }
+  #notFound {
+    display: none;
+    transition: 500ms;
+  }
+  #msgNotFound {
+    text-align: center;
+    margin-top: 2rem;
+    transition: 500ms;
+  }
+
+  footer p {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+/*@media screen and (max-width: 600px) {
+  .container-decrypt {
+    position: relative;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 90%;
+    height: 200px;
+    transition: 500ms;
+  }
+  .copy {
+    margin-bottom: 2rem;
+    transition: 500ms;
+  }
+  #txt-encrypted {
+    margin-bottom: auto;
+    font-size: 16px;
+  }
+}*/

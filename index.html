@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Challenge - Encriptador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+<header>
+    <section>
+        <div class="top">
+            <img class="logo-top" src="img/aluraLogo.png" alt="Logo Alura">
+        </div>
+    </section>
+    <div class="container-title">
+        <h1>Encriptador de texto</h1>
+    </div>
+</header>
+
+<body>
+    <main>
+        <div class="container-both">
+            <div class="container-text">
+                <textarea name="text" class="encrypt_text" cols="75" rows="15"
+                    placeholder="Inserta aquí tu texto sin acentos y en minúsculas" autofocus oninput="readLetters();"></textarea>
+                <div class="bottom-section">
+                    <div class="msg-bottom">
+                        <p class="warning-msg">&#9888; Solo letras en minúsculas y sin acentos</p>
+                        <p class="char-counter">Carácteres (0/600)</p>
+                    </div>
+                    <div class="main-buttons">
+                        <input class="encrypt" type="submit" value="Encriptar" onclick="changeText()">
+                        <input class="decrypt" type="submit" value="Desencriptar" onclick="decryptMsg();">
+                    </div>
+                </div>
+            </div>
+            <div class="container-decrypt">
+                <div class="decrypted-text" id="decrypted-box">
+                    <div class="msgNotFound-container">
+                        <h3 id='txt-encrypted'></h3>
+                        <img src="/img/notFound.svg" alt="Muñeco con una lupa buscando" id="notFound"
+                            style="margin-top: 5rem">
+                        <h3 id="msgNotFound">Ningún
+                            mensaje fue
+                            encontrado
+                        </h3>
+                        <p id="msgNotFound-2"
+                            style="font-weight:normal; font-size:16px; padding: 1em; color: rgb(139, 138, 138);">
+                            Ingresa
+                            el
+                            texto
+                            que
+                            desees encriptar o desencriptar.</p>
+                        <input class="copy" id="copy-btn" type="submit" disabled value="Copiar" onclick="copyText();">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+<footer>
+    <img src="/img/AR.svg" alt="Argentinian Flag" style="margin-top: 10px;">
+    <p>&copy Copyright 2024 fr4ncisx - Challenge Alura Latam </p>
+    <p>All rights reserved</p>
+    <p>What i've used:</p>
+    <img src="img/html.svg" alt="" width="40px">
+    <img src="img/css.svg" alt="" width="40px">
+    <img src="img/javascript.svg" alt="" width="35px">
+</footer>
+
+</html>
