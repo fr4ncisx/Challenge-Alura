@@ -198,9 +198,9 @@ float: left;
   font-size: 12px;
   transition: 200ms;
 }
-footer:hover p {
-  color: rgb(251, 255, 0);
-  transition: 1s;
+footer:hover p{
+  color: rgb(100, 46, 161);
+  transition: 500ms;
 }
 footer {
   background-color: #101111;
@@ -215,6 +215,10 @@ footer p {
   width: 100%;
   font-weight: bold;
   padding: 10px 0;
+}
+.icons-social{
+  display:flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1065px) {
