@@ -1,5 +1,4 @@
 header {
-  font-family: "Inter", sans-serif;
   color: white;
   font-size: 3.5rem;
   transition: 1s;
@@ -17,6 +16,10 @@ header h1 {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
+  text-transform: uppercase;
+  font-family: "Segoe UI";
+  text-shadow: 0 0 20px rgb(86, 73, 255);
+  margin-bottom: 5px;
 }
 .logo-top {
   width: 8rem;
@@ -107,8 +110,9 @@ main {
 }
 .msg-bottom {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .warning-msg,
 .char-counter {
@@ -116,6 +120,12 @@ main {
   font-weight: 500;
   margin: 0.75rem 0.4rem;
   transition: 500ms;
+}
+.warning-msg{
+float: left;
+}
+.char-counter{
+  float: right;
 }
 .bottom-section {
   display: block;
@@ -233,6 +243,9 @@ footer p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .warning-msg {
+    margin-right: 10rem;
   }
   .container-title {
     width: 10%;
