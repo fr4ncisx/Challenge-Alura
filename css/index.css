@@ -7,8 +7,8 @@ header {
   padding: 0.25rem 1rem;*/
 }
 header img {
-  float: left;
-  padding: 0.5rem 0.5rem;
+  position: absolute;
+  padding: 0.5rem 1rem;
 }
 header h1 {
   display: flex;
@@ -19,10 +19,10 @@ header h1 {
   text-transform: uppercase;
   font-family: "Segoe UI";
   text-shadow: 0 0 20px rgb(86, 73, 255);
-  margin-bottom: 5px;
+  margin-bottom: 1rem;
 }
 .logo-top {
-  width: 8rem;
+  width: 15rem;
 }
 body {
   background-color: #000000;
@@ -220,7 +220,7 @@ footer p {
   justify-content: center;
 }
 
-@media screen and (max-width: 1065px) {
+@media screen and (max-width: 1150px) {
   header {
     display: flex;
     text-align: center;
@@ -233,7 +233,8 @@ footer p {
     transition: 1s;
   }
   .logo-top {
-    width: 6rem;
+    position: static;
+    width: 20rem;
     transition: 1s;
   }
   .msgNotFound-container {
@@ -272,14 +273,14 @@ footer p {
     flex-wrap: wrap;
     width: 100%;
     flex-direction: column;
-    margin-right: 5rem;
+    margin-right: 2rem;
     transition: 500ms;
   }
   .container-decrypt {
     position: relative;
     margin-left: 1rem;
     margin-top: 1rem;
-    width: 90%;
+    width: 100%;
     height: auto;
     transition: 500ms;
   }
