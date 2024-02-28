@@ -231,10 +231,10 @@ footer p {
     flex-wrap: wrap;
     flex-direction: column;
     transition: 1s;
-  }
+  }  
   .logo-top {
+    width: 100%;
     position: static;
-    width: 20rem;
     transition: 1s;
   }
   .msgNotFound-container {
