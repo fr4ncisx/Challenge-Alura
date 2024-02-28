@@ -4,6 +4,10 @@ const encryptedText = document.querySelector(".encrypt_text");
 const textDecrypt = document.getElementById("txt-encrypted");
 const copyBtn = document.getElementById("copy-btn");
 const counter = document.querySelector(".char-counter");
+const msgNotFoundTxt = document.getElementById("msgNotFound");
+const msgNotFoundTxt2 = document.querySelector("#msgNotFound-2");
+const imgNotFound = document.getElementById("notFound");
+let txtAreaLength;
 
 function getText() {
   let text = encryptedText.value;
@@ -11,13 +15,14 @@ function getText() {
 }
 
 function hideElements() {
-  document.getElementById("msgNotFound").style.display = "none";
-  document.querySelector("#msgNotFound-2").style.display = "none";
-  document.getElementById("notFound").style.display = "none";
+  msgNotFoundTxt.style.display = "none";
+  msgNotFoundTxt2.style.display = "none";
+  imgNotFound.style.display = "none";
 }
 
 function changeText() {
-  if (encryptedText.value.length > 0 && encryptedText.value.length <= 600) {
+  txtAreaLength = encryptedText.value.length;
+  if (txtAreaLength > 0 && txtAreaLength <= 600) {
     hideElements();
     enableText();
     textDecrypt.innerText = textConverter(getText());
@@ -91,7 +96,8 @@ function textConverter(elementText) {
 }
 
 function decryptMsg() {
-  if (encryptedText.value.length > 0 && encryptedText.value.length <= 600) {
+  txtAreaLength = encryptedText.value.length;
+  if (txtAreaLength > 0 && txtAreaLength <= 600) {
     let elementText = getText();
     cleanEncrypter();
     cleanDecrypter();
@@ -160,8 +166,8 @@ function hasEncryptedWords(text) {
 let lastTxt = "";
 
 function readLetters() {
-  let txt = getText();
-  if (getText().length >= 0 && getText().length < 600) {
+  let txtLength = getText().length;
+  if (txtLength >= 0 && txtLength < 600) {
     timer = getText().length;
     counter.innerText = `Carácteres (${timer}/600)`;
     counter.style.color = "white";
